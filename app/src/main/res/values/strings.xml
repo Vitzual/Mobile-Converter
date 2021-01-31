@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Grahams</string>
+    <string name="app_name">Gram Converter</string>
     <string name="grams_converter">Grams Converter</string>
     <string name="calculate">Calculate</string>
     <string name="kilograms">Kilograms</string>

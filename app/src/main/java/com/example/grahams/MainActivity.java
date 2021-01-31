@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Set variable for the edit text field
     EditText numberToCalculate;
+    TextView calculatedNumber;
 
     // On create, create the on click listener for the calculate button
     @Override
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        calculatedNumber = findViewById(R.id.calculatedNumber);
         numberToCalculate = findViewById(R.id.numberInput);
         radioGroup = findViewById(R.id.radioGroup);
         Button buttonCalculate = findViewById(R.id.button_apply);
@@ -33,7 +36,25 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int radioId = radioGroup.getCheckedRadioButtonId();
                 int number = Integer.parseInt(numberToCalculate.getText().toString());
+
                 radioButton = findViewById(radioId);
+
+                // Find which radio button is selected
+                String total;
+                if (radioButton.getText() == "Micrograms") {
+                    total = "Calculated: " + (number * 1000000);
+                }
+                else if (radioButton.getText() == "Milligrams") {
+                    total = "Calculated: " + (number * 1000);
+                }
+                else if (radioButton.getText() == "Kilograms") {
+                    total = "Calculated: " + (number * 0.001);
+                }
+                else {
+                    total = "Error calculating";
+                }
+
+                calculatedNumber.setText(total);
             }
         });
     }
@@ -41,23 +62,8 @@ public class MainActivity extends AppCompatActivity {
     // Get the selected radio button
     public void checkButton(View v) {
         int radioId = radioGroup.getCheckedRadioButtonId();
-        int number = Integer.parseInt(numberToCalculate.getText().toString());
         radioButton = findViewById(radioId);
-
-        // Find which radio button is selected
-        String total = "Error calculating";
-        if (radioButton.getText() == "Micrograms") {
-            total = "Calculated: " + (number * 1000000);
-        }
-        else if (radioButton.getText() == "Milligrams") {
-            total = "Calculated: " + (number * 1000);
-        }
-        else if (radioButton.getText() == "Kilograms") {
-            total = "Calculated: " + (number * 0.001);
-        }
-
-        // Display to screen
-        Toast toast = Toast.makeText(this, total, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, "Selected " + radioButton.getText(), Toast.LENGTH_SHORT);
         toast.show();
     }
 }

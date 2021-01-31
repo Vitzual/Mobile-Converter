@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         buttonCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                int radioId = radioGroup.getCheckedRadioButtonId();
+                int number = Integer.parseInt(numberToCalculate.getText().toString());
+                radioButton = findViewById(radioId);
             }
         });
     }
@@ -39,9 +41,16 @@ public class MainActivity extends AppCompatActivity {
     // Get the selected radio button
     public void checkButton(View v) {
         int radioId = radioGroup.getCheckedRadioButtonId();
-
+        int number = Integer.parseInt(numberToCalculate.getText().toString());
         radioButton = findViewById(radioId);
 
-        //Toast.makeText(context: this, "Selected")
+        // Find which radio button is selected
+        if (radioButton.getText() == "Milligrams") {
+
+        }
+
+        // Display to screen
+        Toast toast = Toast.makeText(this, "Test", Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

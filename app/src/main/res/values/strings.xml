@@ -5,4 +5,6 @@
     <string name="kilograms">Kilograms</string>
     <string name="grams">Grams</string>
     <string name="milligrams">Milligrams</string>
+    <string name="micrograms">Micrograms</string>
+    <string name="milligrams">Milligrams</string>
 </resources>

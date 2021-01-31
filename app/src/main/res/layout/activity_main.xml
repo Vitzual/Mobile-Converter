@@ -65,14 +65,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="@string/milligrams" />
+            android:text="@string/micrograms" />
 
         <RadioButton
             android:id="@+id/radio_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="@string/grams" />
+            android:text="@string/milligrams" />
 
         <RadioButton
             android:id="@+id/radio_three"

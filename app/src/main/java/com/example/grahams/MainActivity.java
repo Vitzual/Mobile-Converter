@@ -45,12 +45,19 @@ public class MainActivity extends AppCompatActivity {
         radioButton = findViewById(radioId);
 
         // Find which radio button is selected
-        if (radioButton.getText() == "Milligrams") {
-
+        String total = "Error calculating";
+        if (radioButton.getText() == "Micrograms") {
+            total = "Calculated: " + (number * 1000000);
+        }
+        else if (radioButton.getText() == "Milligrams") {
+            total = "Calculated: " + (number * 1000);
+        }
+        else if (radioButton.getText() == "Kilograms") {
+            total = "Calculated: " + (number * 0.001);
         }
 
         // Display to screen
-        Toast toast = Toast.makeText(this, "Test", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, total, Toast.LENGTH_SHORT);
         toast.show();
     }
 }

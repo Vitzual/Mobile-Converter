@@ -41,17 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
                 // Find which radio button is selected
                 String total;
-                if (radioButton.getText() == "Micrograms") {
-                    total = "Calculated: " + (number * 1000000);
+                if (radioButton.getText().toString().equals("Micrograms")) {
+                    total = (number * 1000000) + " " + radioButton.getText().toString();
                 }
-                else if (radioButton.getText() == "Milligrams") {
-                    total = "Calculated: " + (number * 1000);
+                else if (radioButton.getText().toString().equals("Milligrams")) {
+                    total = (number * 1000) + " " + radioButton.getText().toString();
                 }
-                else if (radioButton.getText() == "Kilograms") {
-                    total = "Calculated: " + (number * 0.001);
+                else if (radioButton.getText().toString().equals("Kilograms")) {
+                    total = (number * 0.001) + " " + radioButton.getText().toString();
                 }
                 else {
-                    total = "Error calculating";
+                    total = "Error converting";
                 }
 
                 calculatedNumber.setText(total);

@@ -6,20 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        tools:srcCompat="@android:color/darker_gray" />
+
     <TextView
         android:id="@+id/titleText"
-        android:layout_width="331dp"
-        android:layout_height="68dp"
+        android:layout_width="366dp"
+        android:layout_height="98dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="@string/grams_converter"
@@ -36,19 +47,19 @@
 
     <TextView
         android:id="@+id/calculatedNumber"
-        android:layout_width="331dp"
-        android:layout_height="68dp"
+        android:layout_width="282dp"
+        android:layout_height="38dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="476dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="@string/_0_micrograms"
@@ -63,16 +74,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.071" />
 
-    <EditText
-        android:id="@+id/numberInput"
-        android:layout_width="147dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="282dp"
-        android:inputType="number"
-        android:importantForAutofill="no" />
-
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="118dp"
@@ -83,11 +84,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="226dp"
-        android:layout_marginEnd="147dp"
-        android:layout_marginRight="147dp">
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="186dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginRight="149dp">
 
         <RadioButton
             android:id="@+id/radio_one"
@@ -122,11 +123,21 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginLeft="145dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
         android:layout_marginTop="9dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginRight="145dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginRight="146dp"
         android:text="@string/calculate" />
+
+    <EditText
+        android:id="@+id/numberInput"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="255dp"
+        android:importantForAutofill="no"
+        android:inputType="phone" />
 
 </RelativeLayout>
